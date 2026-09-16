@@ -8,6 +8,7 @@ The old, but well known, Perl Camel Code can be found at https://gist.github.com
 
 
 ## OpenAI Astra (Ultra mode) version:
+```perl
 #!/usr/bin/env perl
 use strict; use warnings;
 
@@ -47,56 +48,56 @@ use strict; use warnings;
                      ;;;;;;;;;;;;                                     ;;;;;;;;;;;;      ;;;;;;;;;
                      ;;;;;;;;;;;;                                     ;;;;;;;;;;';
 s/\s//g;eval;die$@if$@;
-
+```
 
 ### Output:
+```perl
+         ._JXXXXXXXXXXXXXXXXXXXXXXX__                                __XXXXXXXXXXXXXXXXXXXXXXXL_.
+         JXXXXXXXXXXXXXXXXXXXXXXXXXXXXL.                          .JXXXXXXXXXXXXXXXXXXXXXXXXXXXXL
+        JXXXXXXF^7XXXXXXXXXXXXXXXXXXXXXXL.                      .JXXXXXXXXXXXXXXXXXXXXXXF^7XXXXXXL
+       JXF^XXXX__  XXXXXXXXXXXXXXXXXXXXXXX_                    _XXXXXXXXXXXXXXXXXXXXXXX  __XXXX^7XL
+       XX| XXXXXXL 'XXXXXXXXXXXXXXXXXXXXXXX.                  .XXXXXXXXXXXXXXXXXXXXXXX` JXXXXXX |XX
+      .XXXXXXXXXXX| JXXXXXXXXXXXXXXXXXXXXXXX                  XXXXXXXXXXXXXXXXXXXXXXXL |XXXXXXXXXXX.
+      XXXXXXXXXXXX| XXXXXXXXXXXXXXXXXXXXXXXX.                .XXXXXXXXXXXXXXXXXXXXXXXX |XXXXXXXXXXXX
+      XXXXXXXXXXXX| XXXXXXXXXXXXXXXXXXXXXXXX__              __XXXXXXXXXXXXXXXXXXXXXXXX |XXXXXXXXXXXX
+      XXXXXXXXXXXF  XXXXXXXXXXXXXXXXXXXXXXXF7X              XF7XXXXXXXXXXXXXXXXXXXXXXX  7XXXXXXXXXXX
+      _   'XXX    .XXXXXXXXXXXXXXXXXXXXXXXX |X              X| XXXXXXXXXXXXXXXXXXXXXXXX.    XXX`   _
+._   |XX_.7XXXL__JXXXXXXXXXXXXXXXXXXXXXXXF  |X              X|  7XXXXXXXXXXXXXXXXXXXXXXXL__JXXXF._XX|   _.
+|X   |XXX`|XXXXX^^XXXXXXXXXXXXXXXXXXXXXX`    X|            |X    'XXXXXXXXXXXXXXXXXXXXXX^^XXXXX|'XXX|   X|
+|X   |XXX |XXXXX  |XXXXXXXXXXXXXXXXXXXXX     X|            |X     XXXXXXXXXXXXXXXXXXXXX|  XXXXX| XXX|   X|
+|X   |XXF JXXXXX  |XXX.^^^^7XXX^^^7XXXXX.    7|            |F    .XXXXXF^^^XXXF^^^^.XXX|  XXXXXL 7XX|   X|
+|XX_JXXX| XXXXXX  |XXX|    |XXX   |XXXXX|    |X.          .X|    |XXXXX|   XXX|    |XXX|  XXXXXX |XXXL_XX|
+ 7XXXXXX` XXXXXX  |XXX|    |XXX   |XXXXX|    |XX|        |XX|    |XXXXX|   XXX|    |XXX|  XXXXXX 'XXXXXXF
+  7XXXX`  XXXXXX  '^^^`    '^^^   |XXXXX|     ^^`        '^^     |XXXXX|   ^^^`    '^^^`  XXXXXX  'XXXXF
+          ^^^^^^                  '^^^^^`                        '^^^^^`                  ^^^^^^
 
-#!/usr/bin/env perl
-use strict; use warnings;
+              __XXXXXXXXXXXXXXXXXXXXXXXL_.                      ._JXXXXXXXXXXXXXXXXXXXXXXX__
+           .JXXXXXXXXXXXXXXXXXXXXXXXXXXXXL                      JXXXXXXXXXXXXXXXXXXXXXXXXXXXXL.
+         .JXXXXXXXXXXXXXXXXXXXXXXF^7XXXXXXL                    JXXXXXXF^7XXXXXXXXXXXXXXXXXXXXXXL.
+        _XXXXXXXXXXXXXXXXXXXXXXX  __XXXX^7XL                  JXF^XXXX__  XXXXXXXXXXXXXXXXXXXXXXX_
+       .XXXXXXXXXXXXXXXXXXXXXXX` JXXXXXX |XX                  XX| XXXXXXL 'XXXXXXXXXXXXXXXXXXXXXXX.
+       XXXXXXXXXXXXXXXXXXXXXXXL |XXXXXXXXXXX.                .XXXXXXXXXXX| JXXXXXXXXXXXXXXXXXXXXXXX
+      .XXXXXXXXXXXXXXXXXXXXXXXX |XXXXXXXXXXXX                XXXXXXXXXXXX| XXXXXXXXXXXXXXXXXXXXXXXX.
+     __XXXXXXXXXXXXXXXXXXXXXXXX |XXXXXXXXXXXX                XXXXXXXXXXXX| XXXXXXXXXXXXXXXXXXXXXXXX__
+     XF7XXXXXXXXXXXXXXXXXXXXXXX  7XXXXXXXXXXX                XXXXXXXXXXXF  XXXXXXXXXXXXXXXXXXXXXXXF7X
+     X| XXXXXXXXXXXXXXXXXXXXXXXX.    XXX`   _                _   'XXX    .XXXXXXXXXXXXXXXXXXXXXXXX |X
+     X|  7XXXXXXXXXXXXXXXXXXXXXXXL__JXXXF._XX|   _.    ._   |XX_.7XXXL__JXXXXXXXXXXXXXXXXXXXXXXXF  |X
+    |X    'XXXXXXXXXXXXXXXXXXXXXX^^XXXXX|'XXX|   X|    |X   |XXX`|XXXXX^^XXXXXXXXXXXXXXXXXXXXXX`    X|
+    |X     XXXXXXXXXXXXXXXXXXXXX|  XXXXX| XXX|   X|    |X   |XXX |XXXXX  |XXXXXXXXXXXXXXXXXXXXX     X|
+    |F    .XXXXXF^^^XXXF^^^^.XXX|  XXXXXL 7XX|   X|    |X   |XXF JXXXXX  |XXX.^^^^7XXX^^^7XXXXX.    7|
+   .X|    |XXXXX|   XXX|    |XXX|  XXXXXX |XXXL_XX|    |XX_JXXX| XXXXXX  |XXX|    |XXX   |XXXXX|    |X.
+  |XX|    |XXXXX|   XXX|    |XXX|  XXXXXX 'XXXXXXF      7XXXXXX` XXXXXX  |XXX|    |XXX   |XXXXX|    |XX|
+  '^^     |XXXXX|   ^^^`    '^^^`  XXXXXX  'XXXXF        7XXXX`  XXXXXX  '^^^`    '^^^   |XXXXX|     ^^`
+          '^^^^^`                  ^^^^^^                        ^^^^^^                  '^^^^^`
 
-                                $_='open(my$elephant_source_file,"<",$0)||die("
-                            Cannot".chr(32)."read".chr(32).$0.":".$!);my@elephant_s
-                         ource_lines=<$elephant_source_file>;close($elephant_source
-                       _file)||die($!);splice(@elephant_source_lines,0,3);pop@elepha
-                     nt_source_lines;(s/[\r\n]+$//)for@elephant_source_lines;my$eleph
-                   ant_canvas_width=0;for(@elephant_source_lines){$    elephant_canvas
-                  _width=length($_)if(length($_)>$elephant_canva        s_width);}$elep
-                hant_canvas_width+=$elephant_canvas_width%2;push    (@elephant_s   ource
-                _lines,"")if@elephant_source_lines%2;for(@eleph    ant_source_li   nes){
-               $_.=chr(32)x($elephant_canvas_width-length($_))    ;}my@reflected   _sour
-              ce_lines=map{scalar(reverse($_))}@elephant_sour    ce_lines;my$render_smal
-              l_elephant=sub{my($silhouette_source)=@_;my@asci   i_quadrant_glyph=map{chr
-              ($_)}(32,46,46,95,39,124,47,74,96,92,124,76,94,5   5,70,88);my@miniature_ele
-             phant;for(my$source_row=0;$source_row<@$silhouett   e_source;$source_row+=2){
-              my$elephant_output_line="";for(my$source_column=   0;$source_column<$elephan
-          t_canvas_width;$source_column+=2){my$occupied_quadra   nts=0;for(my$pixel_row=0;
-          $pixel_row<2;++$pixel_row){for(my$pixel_column=0;$pi    xel_column<2;++$pixel_co
-          lum  n){my$source_character=substr($silhouette_sourc     e->[$source_row+$pixel_
-          row   ],$source_column+$pixel_column,1);$occupied_quad          rants=(
-          $oc   cupied_quadrants<<1)|($source_character=~/\S/?1:0         );}}$e        le
-          pha     nt_output_line.=$ascii_quadrant_glyph[$occupied_q      uadrants]    ;}pus
-          h(@      miniature_elephant,$elephant_output_line);}return\@miniature_e  lephant;       };m
-         y$r         ight_facing_elephant=$render_small_elephant->(\@elephant_sou  rce_line       s);
-         my$          left_facing_elephant=$render_small_elephant-    >(\@reflect   ed_sour       ce_
-         lin          es);my($elephant_pair,$elephant_row);for$el     ephant_pair   ([$left       _fa
-         cin          g_elephant,$right_facing_elephant],[$right_     facing_elep   hant,$l       eft
-         _fa          cing_elephant]){for$elephant_row(0  ..$#$ri     ght_facing_   elephan       t){
-         my          $elephant_ou       tput_li          ne=$elep     hant_pair->[   0][$el       eph
-        ant          _row].(chr(3       2)x4).$          elephant     _pair->[1][$   elephant   _row]
-       ;$el          ephant_outpu       t_line=          ~s/\s+$/     /;print($ele   phant_output_lin
-     e,"\n"          );}print("\n       ")if$el          ephant_p     air->[0]==$l   eft_facing_elep
-     hant;}          ;;;;;;;;;;;;       ;;;;;;;          ;;;;;;;;     ;;;;;;;;;;;;    ;;;;;;;;;;;;;
-     ;;;;;           ;;;;;;;;;;;;       ;;;;;;;          ;;;;;;;;     ;;;;;;;;;;;;     ;;;;;;;;;;;
-                     ;;;;;;;;;;;;                                     ;;;;;;;;;;;;      ;;;;;;;;;
-                     ;;;;;;;;;;;;                                     ;;;;;;;;;;';
-s/\s//g;eval;die$@if$@;
 
+```
 
 
 
 ## Claude Fable version:
 
-
+```perl
 #!/usr/bin/perl
                                     $_=
                                 q{IC=A!g#IC
@@ -132,9 +133,10 @@ tr!A-Za-z0-9+/!!cd;tr!A-Za-z0-9+/! -_!;$_=unpack'u',join'',map(chr(32+length
 ($_)*3/4).$_,/(.{1,60})/gs);@h=split$/;$_=join$/,map{$r=reverse$h[$_];"$r    "
 .$h[$_]}0..$#h;$t=$_;$t=~s/^/   /gm;print"$t$/$_$/",' 'x25,"just another "
 ."perl hacker,$/";
-
+```
 
 ### Output:
+```
                   :+**+:                                  :+**+:               
             .::::*@@@@@@%%= ::.                    .:: =%%@@@@@@*::::.         
      :*%@@@@@@@@@@@@@%-=%@@@@@@@-                -@@@@@@@%=-%@@@@@@@@@@@@@%*:  
@@ -165,3 +167,4 @@ tr!A-Za-z0-9+/!!cd;tr!A-Za-z0-9+/! -_!;$_=unpack'u',join'',map(chr(32+length
   =%%%%+***   .***+%%%%-                            -%%%%+***.   ***+%%%%=  
                          just another perl hacker,
 
+```
